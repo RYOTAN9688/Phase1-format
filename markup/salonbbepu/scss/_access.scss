@@ -1,0 +1,126 @@
+
+#access{
+    width: 100%;
+    height: 757px;
+    background-color: #A193861F;
+    position: relative;
+
+    @include tab{
+      position: static;
+      width: 100%;
+      height: 710px;
+    }
+
+    
+
+   
+    
+
+    .inner{
+      padding-top:261px;
+
+      @include tab{
+        padding: 0;
+        height: 650px;
+      }
+
+     
+    }
+
+    .title{
+        padding-left: 107px;
+
+        @include tab{
+          padding:60px 0 0 20px ;
+          width: 43%;
+          
+          
+        }
+    }
+
+    .access-wrap{
+        width: 100%;
+        height: 369px;
+        display: flex;
+        justify-content: center;
+
+        @include tab{
+          // 513/650=79%
+          height: 79%;
+          display: flex;
+          flex-direction: column-reverse;
+        }
+    
+
+
+       .access-wrap-title{
+          // 507/1200=42
+           width: 42%;
+         
+          background-color: #D0C5BA;
+          color: #fff;
+           @include tab{
+             width: 100%;
+            //  282/513=55
+             height:55%; 
+         
+
+            }
+          
+
+       } 
+
+        .access-wrap-main{
+            width: 210px;
+            height: 192px;
+            flex-flow: column;
+            margin: 101px 0 0 104px ;
+            display: flex;
+            justify-content: flex-start;
+
+            @include tab{
+              // 207/375=55
+              width: 55%;
+              // 138/282=49
+              height: 49%;
+              padding: 30px 0 0 20px;
+              margin: 0;
+            }
+
+           
+
+        }
+        .access-wrap-main-title{
+            font-size:24px;
+            font-weight: bold;
+            font-family: Roboto Mono for Powerline;
+            color: #00000038;
+
+            @include tab{
+              
+              
+              
+            }
+
+        }
+
+        ul{
+            padding-top: 30px;
+            flex-flow: column;
+            justify-content: space-around;
+        }
+
+        .access-map{
+          width: 58%;
+          height: 100%;
+       
+
+        @include tab{
+          width: 100%;
+          // 231/513=45%
+          height: 45%;
+          margin-top: 50px;
+        }
+      }
+      }
+}

@@ -1,0 +1,386 @@
+/*全体のスタイル（CSSリセット用）*/
+*{
+    /* padding,borderが要素の中に入る */
+    box-sizing:border-box;
+}
+ul{
+    /* リストの・を消す */
+    list-style: none;
+    margin:0;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,button{
+    margin:0;
+    padding:0;
+    font-weight:normal;
+}
+
+a{
+    color:inherit;
+    /* 文字の下の線を消す */
+    text-decoration:none;
+}
+
+body{
+    color:#555;
+    margin:0;
+    line-height:1.6;
+}
+/* 共通のスタイル */
+/* innerは画面サイズが変わっても中央に表示できる */
+.inner{
+    /* width 要素の横幅 */
+    width:1100px;
+    padding: 90px 0;
+    /*margin autoは画面が変わっても綺麗に表示できる  */
+    margin:0 auto;
+}
+.title{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    font-size: 18px;
+    font-style: italic;
+    margin: 0 auto;
+    text-align: center;
+}
+.title-b{
+    font-weight: bold;
+}
+/* header */
+header{
+    /* widthは要素の幅を決めるもの */
+    width: 100%;
+    /* displayは要素の表示形式を決めるもの　flex=htmlブロックを横並びにする */
+    display: flex;
+    /* justify-contentは中身のアイテムの間や周囲に間隔を配置する; */
+    justify-content: space-between;
+    padding:0 20px;
+    color: #fff;
+    background-color: inherit;
+    position: absolute;
+    z-index: 10;
+
+}
+
+.header-logo {
+    padding:  20px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+.header-nav ul {
+    display: flex;
+    padding: 22px 0;
+}
+.header-nav ul li {
+    margin-left: 55px;
+    font-size: 15px;
+}
+
+
+
+/* first-v */
+#first-v{
+    /* heightは要素の高さを決めるもの */
+    height: 770px;
+    background-image: url("../img/bg1.png");
+    background-size: cover;
+    color: #fff;
+    position: relative;
+
+
+}
+
+.first-v-wrap{
+    padding: 285px 0 255px;
+    margin: 0 auto;
+    width: 250px;
+    text-align: center;
+
+
+}
+.first-v-title{
+    margin-bottom: 150px;
+    font-weight: bold;
+    font-size: 27px;
+    color: white;
+}
+.first-v-title::after{
+    content: "";
+    width: 100px;
+    border-top: 1px solid #fff;
+    margin: 20px auto 0;
+    display: block;
+
+}
+
+.first-v-btn{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background:linear-gradient(-90deg,#283C86,#1A719A,#06BEB6);
+    box-shadow:0 5px #070707;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+
+
+
+}
+
+.fa-door-open{
+    margin-right:4px;
+}
+
+/* about */
+#about{
+    color: #191919;
+    background-color: #f8f8f8;
+}
+.about-title{
+    display: flex;
+    padding-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.title-b {
+    font-weight: bold;
+}
+.title::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    margin-right: 20px;
+    border-top: 1px solid #191919;
+}
+
+.title::after{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    margin-right: 20px;
+    border-top:1px solid #191919;
+}
+
+.about-wrap{
+    margin-top: 60px;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.about-item{
+    width: 300px;
+    height: 315px;
+    padding: 35px 50px 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about-item:nth-child(n+4):nth-child(-n+6){
+    margin-top: 47px;
+}
+.about-item_title{
+    font-size: 22px;
+}
+.about-item_img img{
+    width: 122px;
+    height: 122px;
+    margin: 20px 0 25px;
+}
+
+.about-item_desc{
+    font-size: 13px;
+}
+/* newsのタイトル */
+#news{
+    width:100%;
+    background-image:url("../img/bg2.png");
+    background-size: cover;
+}
+.white-title{
+    font-style: italic;
+    color: #fff;
+}
+.white-title::before{
+    content: "";
+    width: 30px;
+    margin-right: 20px;
+    border-top: 1px solid #fff;
+}
+.white-title::after{
+    content: "";
+    width: 30px;
+    margin-left: 20px;
+    border-top: 1px solid #fff;
+}
+.news-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-item{
+    width: 336px;
+    margin-top: 60px;
+}
+.news-img{
+    width: 100%;
+    height: 207px;
+}
+.news-img img {
+    width: 100%;
+    height: 100%;
+}
+.news-content{
+    padding: 20px;
+    background-color: #fff;
+}
+.news-date{
+    font-size: 10px;
+    font-weight: bold;
+}
+.news-title{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 0 20px;
+}
+
+.news-txt{
+    font-size: 12px;
+}
+
+.red{
+     color: red;
+     margin-left: 8px;
+}
+
+.caution-red{
+    margin-left: 0;
+    margin-right: 8px;
+
+}
+
+
+
+
+
+
+
+/* entry */
+.entry-wrap{
+    padding:175px 0;
+    width: 400px;
+    margin:0 auto;
+    text-align: center;
+}
+
+.entry-title{
+    margin-bottom: 55px;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #191919;
+
+
+}
+.entry-btn{
+    width: 320px;
+
+}
+
+/* contact */
+#contact{
+    background-image: url("../img/bg3.png");
+    background-size: cover;
+    color: #fff;
+}
+#contact .title::before, #contact .title::after{
+    border-color: #fff;
+}
+
+.contact-wrap{
+    width: 600px;
+    margin: 0 auto;
+}
+
+input,select,textarea{
+    width: 100%;
+    border-radius: 7px;
+    padding:15px;
+}
+
+input,select{
+    height: 55px;
+
+}
+
+textarea{
+    height: 185px;
+}
+
+select{
+    appearance: none;
+}
+
+.contact-box:nth-of-type(3){
+    position: relative;
+}
+.contact-box:nth-of-type(3)::after{
+    position: absolute;
+    background-image:url("../img/arrow.png");
+    background-size: 100%;
+    display: block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 60%;
+    right: 20px;
+
+}
+.contact-caution{
+    margin: 60px 0 25px;
+    font-size: 15px;
+    font-weight: lighter;
+
+
+}
+.contact-box{
+    margin-bottom: 33px;
+}
+
+.contact-box:nth-of-type(4){
+    margin-bottom:0 ;
+}
+.contact-text{
+    margin-bottom: 10px;
+    font-size: 15px;
+
+}
+
+
+
+
+
+
+/* footer */
+
+footer{
+    background-color: #191919;
+    height: 50px;
+}
+.campany-info {
+    text-align:center;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+
+
+}

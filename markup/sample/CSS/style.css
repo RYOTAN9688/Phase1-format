@@ -1,0 +1,186 @@
+/*全体のスタイル（CSSリセット用）*/
+*{
+    /* padding,borderが要素の中に入る */
+    box-sizing:border-box;
+}
+ul{
+    /* リストの・を消す */
+    list-style: none;
+    margin:0;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,button{
+    margin:0;
+    padding:0;
+    font-weight:normal;
+}
+
+a{
+    color:inherit;
+    /* 文字の下の線を消す */
+    text-decoration:none;
+}
+
+body{
+    color:#555;
+    margin:0;
+    line-height:1.6;
+}    
+
+.inner{
+    width: 1100px;
+    padding: 90px 0;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color:inherit;
+    position: absolute;
+    z-index: 10;
+    color: white;
+}
+.header-logo{
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 18x;
+
+    
+
+}
+
+.header-nav ul{
+    list-style: none;
+    display: flex;
+    padding: 23px 0;
+    
+
+}
+.header-nav ul li{
+    margin-left: 55px;
+    font-size: 15px;
+}
+
+#first-v{
+    height: 770px;
+    background-image:url(../img/bg1.png);
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    
+
+
+}
+
+.first-v-wrap{
+    padding: 285px 0 256px;
+    margin: 0 auto;
+    width: 250px;
+    text-align: center;
+}
+
+
+.first-v-title{
+    padding-bottom: 164px;
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.first-v-title::after{
+    content: "";
+    width: 100px;
+    border-top: 1px solid #fff;
+    margin: 20px auto 0;
+    display: block;
+
+
+
+}   
+.first-v-btn{
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    background:linear-gradient(-90deg ,#283C86,#1A719A,#06BEB6);
+    box-shadow:0 5px #070707;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+.fa-door-open{
+    padding-right: 5px;
+} 
+
+
+#about{
+  
+
+}
+
+.title{
+    text-align: center;
+   
+ 
+}
+
+.item-wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+
+}
+.about-item{
+    width: 312px;
+    height: 300px;
+}
+
+
+
+/* entry */
+.entry-wrap{
+    padding: 175px 0;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.entry-title{
+
+}
+
+.entry-btn{
+
+}
+.
+
+
+
+
+
+
+
+footer{
+   height: 50px;
+   background-color: #191919;
+   
+
+}
+
+.footer-logo{
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    /* line-height で行間隔を調整する */
+    line-height: 50px;
+    color: white;
+
+
+
+}

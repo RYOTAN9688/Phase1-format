@@ -1,0 +1,34 @@
+#entry{
+    height: 482px;
+    width: 100%;
+    position: relative;
+
+}
+
+.entry-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 320px;
+    height: 123px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.entry-copy{
+    font-size: 18px;
+    font-weight: bold;
+     
+}
+
+.entry-btn{
+    @extend .fv-btn;
+    width: 100%;
+
+    
+
+}
