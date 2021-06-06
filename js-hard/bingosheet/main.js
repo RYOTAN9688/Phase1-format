@@ -5,8 +5,8 @@
 
 const table = document.getElementById("view");
 const heads = ["B", "I", "N", "G", "O"]
-const hitNum = document.createElement("hit-num")
-hitNum.textContent = "free";
+let hitNum = document.createElement("hit-num")
+hitNum = "free";
 
 //1~15を作成
 let b_randoms = [];
@@ -106,8 +106,23 @@ for (let y = 0; y < 6; y++) {
         if (y === 0) {//横が一行目の時に
             td.textContent = heads[x];//縦１行目にheadを代入する。
         }
-        if (x === 0 && y <= 5 && y > 0) {
+        if (x === 0 && y <= 5) {
             td.textContent = b_randoms[y];
+        }
+        if (x === 1 && y <= 5) {
+            td.textContent = i_randoms[y];
+        }
+        if (x === 2 && y <= 5 && y !== 3) {
+            td.textContent = n_randoms[y];
+        }
+        if (x === 2 && y == 3) {
+            td.textContent = hitNum;
+        }
+        if (x === 3 && y <= 5) {
+            td.textContent = g_randoms[y];
+        }
+        if (x === 4 && y <= 5) {
+            td.textContent = o_randoms[y];
         }
         console.log(td);
     }
