@@ -12,9 +12,12 @@ td {
 
 /* チャレンジ問題 */
 
-/* .hit-num {
+.hit-num {
   background-color: black ;
   color: rgb(70, 206, 216) ;
-} */
+}
 
+.set{
+  background-color: red;
+}
 /* チャレンジ問題 ここまで */

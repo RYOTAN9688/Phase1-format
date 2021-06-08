@@ -3,10 +3,12 @@
 //真ん中は free にする
 //２次元配列にて生成する
 
-const table = document.getElementById("view");
+let table = document.getElementById("view");
+
 const heads = ["B", "I", "N", "G", "O"]
-let hitNum = document.createElement("hit-num")
+let hitNum = document.createElement("hit-num");
 hitNum = "free";
+
 
 //1~15を作成
 let b_randoms = [];
@@ -95,46 +97,86 @@ console.log(o_randoms);
 
 
 
-
 for (let y = 0; y < 6; y++) {
-    const tr = table.insertRow(); //tr（横方向の行数）を追加
-
-
+    let tr = table.insertRow(); //tr（横方向の行数）を追加
     console.log(tr);
     for (let x = 0; x < 5; x++) {
-        const td = tr.insertCell()//td（縦方向の行数）を追加
+        let td = tr.insertCell()//td（縦方向の行数）を追加
         if (y === 0) {//横が一行目の時に
             td.textContent = heads[x];//縦１行目にheadを代入する。
+
         }
-        if (x === 0 && y <= 5) {
+        if (x === 0 && y <= 5 && y > 0) {
             td.textContent = b_randoms[y];
         }
-        if (x === 1 && y <= 5) {
+        if (x === 1 && y <= 5 && y > 0) {
             td.textContent = i_randoms[y];
         }
-        if (x === 2 && y <= 5 && y !== 3) {
+        if (x === 2 && y <= 5 && y !== 3 && y > 0) {
             td.textContent = n_randoms[y];
         }
         if (x === 2 && y == 3) {
             td.textContent = hitNum;
+            td.classList.add("hit-num");
         }
-        if (x === 3 && y <= 5) {
+        if (x === 3 && y <= 5 && y > 0) {
             td.textContent = g_randoms[y];
         }
-        if (x === 4 && y <= 5) {
+        if (x === 4 && y <= 5 && y > 0) {
             td.textContent = o_randoms[y];
         }
         console.log(td);
+
     }
 }
 console.log(typeof table);
 
+/*ボタンをおした時に乱数を生成し、生成した乱数とビンゴシートの数字が同じであれば、
+シートの色が変わる*/
+const button = document.getElementById("hitNum");
+const tds = Array.from(document.querySelectorAll("td"));
+// const content = td.innerText;
+// console.lof(content);
+console.log(tds);
 
 
 
+button.addEventListener("click", function () {
 
+    let randomNum = [];
 
+    min = 1, max = 75;
+    for (i = min; i <= max; i++) {
+        while (true) {
+            let tmp = intRandom(min, max);
+            if (!randomNum.includes(tmp)) {
+                randomNum.push(tmp);
+                break;
+            }
+        }
+    }
 
+    function intRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    console.log(randomNum);
+    let random = randomNum[0];
+    let randoms = String(random);
+    console.log(randoms);
+
+    alert(`数字は${randoms}番です`);
+
+    //randomとtd内の数字を比較して、同じ数字なら黒色にする
+    //randomは数字　//tdはinnertextに数字が入っている
+    for (i = 0; i < tds.length; i++) {
+        const tds0 = tds[i].innerText;
+        console.log(tds0);
+
+        if (randoms === tds0) {
+            tds[i].classList.add("hit-num");
+        }
+    }
+});
 
 
 
